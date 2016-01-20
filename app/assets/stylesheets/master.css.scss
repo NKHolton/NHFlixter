@@ -1,10 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster+Two:400,700italic);
 
-.navbar-inverse .navbar-brand {
+.navbar {
 	border-radius: 0;
+	font-family: "Helvetica Neue", Helvetica;
+	font-weight: 200;
+	box-shadow: 0px 1px 3px #2a2a2a;
+	background: url('rubber_grip.png');
+}
+
+.navbar-inverse a.navbar-brand {
 	font-family: 'Lobster Two', cursive;
 	letter-spacing: 0.8px;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 35px;
+	color: white;
 }
