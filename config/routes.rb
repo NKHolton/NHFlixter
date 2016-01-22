@@ -3,6 +3,9 @@ Flixter::Application.routes.draw do
   root 'static_pages#index'
   resources :courses, only: [:index, :show] #added this line after running comand to create courses controller (note, NOT the instructor courses controller, just the regular courses controller)
   namespace :instructor do
+    resources :sections, only: [] do
+      resources :lessons, only: [:new, :create]
+    end
     resources :courses, only: [:new, :create, :show] do
       resources :sections, only: [:new, :create]
     end
