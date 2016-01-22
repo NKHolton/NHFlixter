@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
 	def index
-		@courses = Course.all #loads all the courses in our database
+		@courses = Course.all 
 	end	
 
 	def show
