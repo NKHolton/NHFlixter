@@ -8,6 +8,7 @@
 			<%= number_to_currency @course.cost %>
 		</span>
 		<br />
+		<br />
 		<%= image_tag @course.image, class: 'img-responsive' %>
 
  		<% if current_user && current_user == @course.user %>
@@ -28,7 +29,7 @@
 				<h3>
 					<%= section.title %>
 				</h3>
-				<%= section.lessons.each do |lesson| %>
+				<% section.lessons.each do |lesson| %>
 					<div class="col-xs-12 col-sm-6">
 						<div class="lesson text-center">
 							<br />

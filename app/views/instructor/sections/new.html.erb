@@ -5,6 +5,7 @@
     <%= f.input :title %>
     <br />
     <%= f.submit "Add a section", class: 'btn btn-primary' %>
+    <%=link_to 'Close', instructor_course_path(current_course), class: 'btn btn-default' %>
     <br />
     <br />
   <% end %>
