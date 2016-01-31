@@ -1,5 +1,6 @@
 Flixter::Application.routes.draw do
   devise_for :users
+  resource :dashboard, only: [:show]
   root 'static_pages#index'
   resources :courses, only: [:index, :show] do #added this line after running comand to create courses controller (note, NOT the instructor courses controller, just the regular courses controller)
     resources :enrollments, only: :create
