@@ -2,7 +2,8 @@
 
 $(function() {
     $('.new-lesson-button').click(function( event ) {
-      alert( event.target );
+     var lessonUrl = $(event.target).data('lesson-url');
+      $('#newLessonForm').attr('action', lessonUrl);
     });
 
 $(function() {
@@ -28,8 +29,8 @@ $(function() {
           data: { section: { row_order_position: ui.item.index() } }
         });
       }
+    });
   });
-});
 
 </script>
 
@@ -121,16 +122,16 @@ $(function() {
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="newLessonModalLabel">Add a new lesson</h4>
       </div>
-      <%= simple_form_for @lesson, url: "#" do |f| %>
+      <%= simple_form_for @lesson, url: "#", html: {id: 'newLessonForm' } do |f| %>
         <div class="modal-body">
             <%= f.input :title %>
             <%= f.input :subtitle %>
             <%= f.input :video %>          
         </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <%= f.submit "Add the lesson", class: 'btn btn-primary' %>
-      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit "Add the lesson", class: 'btn btn-primary' %>
+        </div>
       <% end %>      
     </div>
   </div>
