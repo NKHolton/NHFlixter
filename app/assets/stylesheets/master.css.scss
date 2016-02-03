@@ -16,7 +16,7 @@
 }
 
 .hero {
-	background: url('hero5.jpg');
+	background: url('hero6.jpg');
 	-webkit-background-size: cover;
 	-mox-background-size: cover;
 	-o-background-size: cover;
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 body {
-	background: url('squared_metal.png');
+	background: url('mooning.png');
 	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 }
 
@@ -141,4 +141,8 @@ ul .header .glyphicon {
 
 .lessons li p {
 	margin: 0;
+}
+
+.btn-success {
+	background-color: #1D8296
 }
